@@ -1,0 +1,100 @@
+main {
+    box-sizing: border-box;
+    .portfolio {
+        padding: 57px 0 102px 0;
+        .portf-head {
+            margin-bottom: 48px;
+            text-align: center;
+            h2,
+            p {
+                color: #fff;
+                font-family: "Bebas Neue";
+                font-size: 48px;
+                font-weight: 400;
+            }
+            p {
+                font-size: 24px;
+            }
+        }
+        padding-bottom: 102px;
+        background-color: #65ba99;
+        .container {
+            display: flex;
+            flex-flow: row wrap;
+            .portfolio-item {
+                height: 255px;
+                flex-basis: 50%;
+                background-image: url('../img/some-photo.png');
+                background-position: center;
+                &:nth-child(9) {
+                    background-image: url('../img/portf-one.png');
+                }
+                &:nth-child(10) {
+                    background-image: url('../img/portf-two.png');
+                }
+                &:nth-child(11) {
+                    background-image: url('../img/portf-three.png');
+                }
+                &:nth-child(12) {
+                    background-image: url('../img/portf-four.png');
+                }
+                &:nth-child(13) {
+                    background-image: url('../img/portf-five.png');
+                }
+                &:nth-child(14) {
+                    background-image: url('../img/portf-six.png');
+                }
+                &:nth-child(15) {
+                    background-image: url('../img/portf-seven.png');
+                }
+                &:nth-child(16) {
+                    background-image: url('../img/portf-eight.png');
+                }
+                &:nth-child(17) {
+                    background-image: url('../img/portf-nine.png');
+                }
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .column-three {
+                height: 255px;
+                flex-basis: 25%;
+            }
+            .column-four {
+                height: 235px;
+                flex-basis: 25%;
+            }
+            .column-five {
+                height: 235px;
+                flex-basis: 50%;
+            }
+            .column-five-half {
+               height: 235px;
+               flex-basis: 25%; 
+            }
+        }
+    }
+    .testimonial {
+        height: 300px;
+        background-image: url('../img/testemonial-bg.png');
+        text-align: center;
+        box-sizing: border-box;
+        .quote,
+        .quote-author {
+            color: #fff;
+            font-family: "Bebas Neue";
+            font-size: 36px;
+            font-weight: 400;
+        }
+        .quote {
+            padding-top: 130px;
+        }
+        .quote-author {
+            margin: 2% 6% 0 0;
+            font-size: 24px;
+            text-align: right;
+        }
+    }
+}

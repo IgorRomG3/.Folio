@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    margin: 0 auto;
+    @media screen and (min-width: 992px) {
+        width: 940px;
+    }
+    @media screen and (min-width: 768px) {
+        width: 750px;
+    }
+    @media screen and (max-width: 767px) {
+        width: 100%;
+    }
+}
+@font-face {
+    font-family: "Bebas Neue";
+    src: url('../fonts/BebasNeue Regular.otf');
+}
+@import 'header.scss';
+@import 'main.scss';
+@import 'footer.scss';
