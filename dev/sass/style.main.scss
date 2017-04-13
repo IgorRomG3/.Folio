@@ -10,15 +10,18 @@ a {
 }
 .container {
     margin: 0 auto;
-    @media screen and (min-width: 992px) {
-        width: 940px;
+    @media screen and (max-width: 767px) {
+        width: 100%;
     }
     @media screen and (min-width: 768px) {
         width: 750px;
     }
-    @media screen and (max-width: 767px) {
-        width: 100%;
+    @media screen and (min-width: 992px) {
+        width: 940px;
     }
+}
+.clearfix {
+    clear: both;
 }
 @font-face {
     font-family: "Bebas Neue";
