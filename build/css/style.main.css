@@ -29,9 +29,11 @@ a {
 
 header {
   background-image: url("../img/photo-head.png");
-  background-size: 100%;
   background-position: center;
   height: 500px; }
+  @media screen and (min-width: 1600px) {
+    header {
+      background-size: 100%; } }
   header .head-pic {
     padding: 14% 0 0 6%; }
     header .head-pic h1 {
@@ -40,30 +42,46 @@ header {
       font-size: 70px;
       font-weight: 400;
       text-transform: uppercase; }
+      @media screen and (min-width: 1600px) {
+        header .head-pic h1 {
+          font-size: 80px; } }
     header .head-pic p {
       color: #fff;
       font-family: "Bebas Neue";
       font-size: 36px;
       font-weight: 400; }
+      @media screen and (min-width: 1600px) {
+        header .head-pic p {
+          font-size: 46px; } }
 
 nav {
   padding: 33px 0;
-  height: 100px;
   background-color: #252222;
   box-sizing: border-box; }
   nav .container {
     display: flex;
-    flex-direction: row; }
+    flex-wrap: wrap; }
     nav .container .logo {
       flex-basis: 20%; }
+      @media screen and (max-width: 535px) {
+        nav .container .logo {
+          flex-basis: 100%;
+          text-align: center; } }
       nav .container .logo a {
         color: #fff;
         font-family: "Bebas Neue";
         font-size: 48px;
         font-weight: 400; }
+        @media screen and (min-width: 1600px) {
+          nav .container .logo a {
+            font-size: 58px; } }
     nav .container .main-nav {
       flex-basis: 50%;
       text-align: right; }
+      @media screen and (max-width: 535px) {
+        nav .container .main-nav {
+          flex-basis: 100%;
+          text-align: center; } }
       nav .container .main-nav li {
         padding: 13px 10px 10px 10px;
         display: inline-block; }
@@ -76,18 +94,25 @@ nav {
           font-size: 18px;
           font-weight: 400;
           color: #fff; }
+          @media screen and (min-width: 1600px) {
+            nav .container .main-nav li a {
+              font-size: 28px; } }
     nav .container .networks {
       flex-basis: 30%;
       text-align: right; }
+      @media screen and (max-width: 535px) {
+        nav .container .networks {
+          flex-basis: 100%;
+          text-align: center; } }
       nav .container .networks li {
         display: inline-block; }
 
 main {
+  padding-bottom: 102px;
+  background-color: #65ba99;
   box-sizing: border-box; }
   main .portfolio {
-    padding: 57px 0 102px 0;
-    padding-bottom: 102px;
-    background-color: #65ba99; }
+    padding: 57px 0 102px 0; }
     main .portfolio .portf-head {
       margin-bottom: 48px;
       text-align: center; }
@@ -97,8 +122,15 @@ main {
         font-family: "Bebas Neue";
         font-size: 48px;
         font-weight: 400; }
+        @media screen and (min-width: 1600px) {
+          main .portfolio .portf-head h2,
+          main .portfolio .portf-head p {
+            font-size: 58px; } }
       main .portfolio .portf-head p {
         font-size: 24px; }
+        @media screen and (min-width: 1600px) {
+          main .portfolio .portf-head p {
+            font-size: 34px; } }
     main .portfolio .container {
       display: flex;
       flex-flow: row wrap; }
@@ -117,17 +149,23 @@ main {
           background-image: url("../img/portf-four.png"); }
         main .portfolio .container .portfolio-item:nth-child(13) {
           background-image: url("../img/portf-five.png"); }
+          @media screen and (max-width: 470px) {
+            main .portfolio .container .portfolio-item:nth-child(13) {
+              flex-basis: 100%; } }
         main .portfolio .container .portfolio-item:nth-child(14) {
           background-image: url("../img/portf-six.png"); }
+          @media screen and (max-width: 470px) {
+            main .portfolio .container .portfolio-item:nth-child(14) {
+              flex-basis: 50%; } }
         main .portfolio .container .portfolio-item:nth-child(15) {
           background-image: url("../img/portf-seven.png"); }
+          @media screen and (max-width: 470px) {
+            main .portfolio .container .portfolio-item:nth-child(15) {
+              flex-basis: 50%; } }
         main .portfolio .container .portfolio-item:nth-child(16) {
           background-image: url("../img/portf-eight.png"); }
         main .portfolio .container .portfolio-item:nth-child(17) {
           background-image: url("../img/portf-nine.png"); }
-        main .portfolio .container .portfolio-item img {
-          width: 100%;
-          height: 100%; }
       main .portfolio .container .column-three {
         height: 255px;
         flex-basis: 25%; }
@@ -141,19 +179,24 @@ main {
         height: 235px;
         flex-basis: 25%; }
   main .testimonial {
+    padding-top: 130px;
     height: 300px;
     background-image: url("../img/testemonial-bg.png");
-    background-size: 100%;
     text-align: center;
     box-sizing: border-box; }
+    @media screen and (max-width: 992px) {
+      main .testimonial {
+        background-position-x: 20%; } }
     main .testimonial .quote,
     main .testimonial .quote-author {
       color: #fff;
       font-family: "Bebas Neue";
       font-size: 36px;
       font-weight: 400; }
-    main .testimonial .quote {
-      padding-top: 130px; }
+      @media screen and (max-width: 550px) {
+        main .testimonial .quote,
+        main .testimonial .quote-author {
+          font-size: 26px; } }
     main .testimonial .quote-author {
       margin: 2% 6% 0 0;
       font-size: 24px;
@@ -181,8 +224,11 @@ main {
           display: flex;
           justify-content: space-between; }
           main .news .news-posts .post .post-name p {
-            flex-basis: 25%;
+            flex-basis: 30%;
             text-align: center; }
+            @media screen and (max-width: 992px) {
+              main .news .news-posts .post .post-name p {
+                flex-basis: 40%; } }
           main .news .news-posts .post .post-name .date {
             background-color: #59a386;
             color: #fffefe;
@@ -190,6 +236,9 @@ main {
             font-size: 11px;
             font-weight: 400;
             line-height: 21px; }
+            @media screen and (max-width: 643px) {
+              main .news .news-posts .post .post-name .date {
+                font-size: 9px; } }
           main .news .news-posts .post .post-name .category {
             position: relative;
             color: #e74c3c;
@@ -201,7 +250,7 @@ main {
             main .news .news-posts .post .post-name .category:before {
               content: '';
               position: absolute;
-              left: 0;
+              left: -10%;
               top: 23%;
               width: 16px;
               height: 13px;

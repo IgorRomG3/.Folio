@@ -1,4 +1,6 @@
 main {
+    padding-bottom: 102px;
+    background-color: #65ba99;
     box-sizing: border-box;
     .portfolio {
         padding: 57px 0 102px 0;
@@ -11,13 +13,17 @@ main {
                 font-family: "Bebas Neue";
                 font-size: 48px;
                 font-weight: 400;
+                @media screen and (min-width: 1600px) {
+                    font-size: 58px;
+                }
             }
             p {
                 font-size: 24px;
+                @media screen and (min-width: 1600px) {
+                    font-size: 34px;
+                }
             }
         }
-        padding-bottom: 102px;
-        background-color: #65ba99;
         .container {
             display: flex;
             flex-flow: row wrap;
@@ -40,22 +46,27 @@ main {
                 }
                 &:nth-child(13) {
                     background-image: url('../img/portf-five.png');
+                    @media screen and (max-width: 470px) {
+                        flex-basis: 100%;
+                    }
                 }
                 &:nth-child(14) {
                     background-image: url('../img/portf-six.png');
+                    @media screen and (max-width: 470px) {
+                        flex-basis: 50%;
+                    }
                 }
                 &:nth-child(15) {
                     background-image: url('../img/portf-seven.png');
+                    @media screen and (max-width: 470px) {
+                        flex-basis: 50%;
+                    }
                 }
                 &:nth-child(16) {
                     background-image: url('../img/portf-eight.png');
                 }
                 &:nth-child(17) {
                     background-image: url('../img/portf-nine.png');
-                }
-                img {
-                    width: 100%;
-                    height: 100%;
                 }
             }
             .column-three {
@@ -77,20 +88,23 @@ main {
         }
     }
     .testimonial {
+        padding-top: 130px;
         height: 300px;
         background-image: url('../img/testemonial-bg.png');
-        background-size: 100%;
         text-align: center;
         box-sizing: border-box;
+        @media screen and(max-width:992px) {
+            background-position-x: 20%;
+        }
         .quote,
         .quote-author {
             color: #fff;
             font-family: "Bebas Neue";
             font-size: 36px;
             font-weight: 400;
-        }
-        .quote {
-            padding-top: 130px;
+            @media screen and(max-width:550px) {
+                font-size: 26px;
+            }
         }
         .quote-author {
             margin: 2% 6% 0 0;
@@ -122,8 +136,11 @@ main {
                     display: flex;
                     justify-content: space-between;
                     p {
-                        flex-basis: 25%;
+                        flex-basis: 30%;
                         text-align: center;
+                        @media screen and (max-width: 992px) {
+                            flex-basis: 40%;
+                        }
                     }
                     .date {
                         background-color: #59a386;
@@ -132,6 +149,9 @@ main {
                         font-size: 11px;
                         font-weight: 400;
                         line-height: 21px;
+                        @media screen and (max-width: 643px) {
+                            font-size: 9px;
+                        }
                     }
                     .category {
                         position: relative;
@@ -144,7 +164,7 @@ main {
                         &:before {
                             content: '';
                             position: absolute;
-                            left: 0;
+                            left: -10%;
                             top: 23%;
                             width: 16px;
                             height: 13px;
