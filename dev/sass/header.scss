@@ -35,8 +35,9 @@ nav {
     .container {
         display: flex;
         flex-wrap: wrap;
+        align-items: center;
         .logo {
-            flex-basis: 20%;
+            flex: 1 1 auto;
             @media screen and (max-width: 535px) {
                 flex-basis: 100%;
                 text-align: center;
@@ -52,9 +53,11 @@ nav {
             }
         }
         .main-nav {
-            flex-basis: 50%;
+            margin-right: 5%;
+            flex: 1 1 auto;
             text-align: right;
             @media screen and (max-width: 535px) {
+                margin: 0;
                 flex-basis: 100%;
                 text-align: center;
             }
@@ -79,14 +82,13 @@ nav {
             }
         }
         .networks {
-            flex-basis: 30%;
-            text-align: right;
+            display: flex;
+            flex: 1 1 auto;
             @media screen and (max-width: 535px) {
-                flex-basis: 100%;
-                text-align: center;
+                justify-content: center;
             }
             li {
-                display: inline-block;
+                padding: 0 1%;
             }
         }
     }
