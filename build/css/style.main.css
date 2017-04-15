@@ -213,24 +213,30 @@ main {
       font-family: "Bebas Neue";
       font-size: 48px;
       font-weight: 400; }
-    main .news .news-posts {
+    main .news .news-wrap {
       display: flex;
       justify-content: space-around;
       box-sizing: border-box; }
-      main .news .news-posts .post {
+      @media screen and (max-width: 767px) {
+        main .news .news-wrap {
+          flex-direction: column; } }
+      main .news .news-wrap .post {
         position: relative;
         flex-basis: 45%; }
-        main .news .news-posts .post .post-name {
+        @media screen and (max-width: 767px) {
+          main .news .news-wrap .post {
+            margin-bottom: 50px; } }
+        main .news .news-wrap .post .post-name {
           margin-bottom: 27px;
           display: flex;
           justify-content: space-between; }
-          main .news .news-posts .post .post-name p {
+          main .news .news-wrap .post .post-name p {
             flex-basis: 30%;
             text-align: center; }
             @media screen and (max-width: 992px) {
-              main .news .news-posts .post .post-name p {
+              main .news .news-wrap .post .post-name p {
                 flex-basis: 40%; } }
-          main .news .news-posts .post .post-name .date {
+          main .news .news-wrap .post .post-name .date {
             background-color: #59a386;
             color: #fffefe;
             font-family: "Open Sans";
@@ -238,9 +244,9 @@ main {
             font-weight: 400;
             line-height: 21px; }
             @media screen and (max-width: 643px) {
-              main .news .news-posts .post .post-name .date {
+              main .news .news-wrap .post .post-name .date {
                 font-size: 9px; } }
-          main .news .news-posts .post .post-name .category {
+          main .news .news-wrap .post .post-name .category {
             position: relative;
             color: #e74c3c;
             font-family: "Open Sans";
@@ -248,7 +254,7 @@ main {
             font-weight: 600;
             font-style: italic;
             line-height: 21px; }
-            main .news .news-posts .post .post-name .category:before {
+            main .news .news-wrap .post .post-name .category:before {
               content: '';
               position: absolute;
               left: -10%;
@@ -256,79 +262,80 @@ main {
               width: 16px;
               height: 13px;
               background-image: url("../img/tag-icon.png"); }
-        main .news .news-posts .post p {
+        main .news .news-wrap .post p {
           color: #59a386;
           font-family: "Open Sans";
           font-size: 16px;
           font-weight: 600;
           line-height: 21px; }
-        main .news .news-posts .post img.photo {
+        main .news .news-wrap .post img.photo {
           width: 100%; }
-        main .news .news-posts .post .description {
+        main .news .news-wrap .post .description {
           color: #666767;
           font-family: "Open Sans";
           font-size: 14px;
           font-weight: 400;
           line-height: 21px; }
-        main .news .news-posts .post .read-more {
+        main .news .news-wrap .post .read-more {
           position: absolute;
-          right: 8%;
-          bottom: -5%; }
-          main .news .news-posts .post .read-more a {
+          right: 8%; }
+          main .news .news-wrap .post .read-more a {
             position: relative;
             color: #e2534b;
             font-family: "Open Sans";
             font-size: 14px;
             font-weight: 400;
             line-height: 21px; }
-            main .news .news-posts .post .read-more a:after {
+            main .news .news-wrap .post .read-more a:after {
               content: '';
               position: absolute;
               top: 20%;
-              right: -35%;
+              right: -30%;
               width: 12px;
               height: 13px;
               background-image: url("../img/arrow.png"); }
-        main .news .news-posts .post .post-name {
+        main .news .news-wrap .post .post-name {
           color: #59a386;
           font-family: "Bebas Neue";
           font-size: 18px;
           font-weight: 400;
           line-height: 20px;
           text-transform: uppercase; }
-        main .news .news-posts .post .categiries {
+        main .news .news-wrap .post .categiries {
           margin-bottom: 61px;
           display: flex;
           flex-wrap: wrap; }
-          main .news .news-posts .post .categiries li {
+          main .news .news-wrap .post .categiries li {
             margin: 0 5% 2% 0;
             flex-basis: 15%;
             text-align: center;
             background-color: #59a386; }
-            main .news .news-posts .post .categiries li a {
+            main .news .news-wrap .post .categiries li a {
               color: #fff;
               font-family: "Open Sans";
               font-size: 14px;
               font-weight: 400;
               line-height: 21px; }
-            main .news .news-posts .post .categiries li:hover {
+            main .news .news-wrap .post .categiries li:hover {
               background-color: #e2534b; }
-        main .news .news-posts .post h4 {
+          main .news .news-wrap .post .categiries .selected {
+            background-color: #e2534b; }
+        main .news .news-wrap .post h4 {
           font-size: 20px;
           line-height: 24px;
           color: #252222;
           font-family: "Open Sans";
           font-weight: 400; }
-          main .news .news-posts .post h4 span {
+          main .news .news-wrap .post h4 span {
             color: #818181;
             font-family: "Open Sans Light";
             font-style: italic; }
-        main .news .news-posts .post .posts li {
+        main .news .news-wrap .post .posts li {
           margin-top: 25px;
           display: flex; }
-          main .news .news-posts .post .posts li p {
+          main .news .news-wrap .post .posts li p {
             margin-left: 2%; }
-            main .news .news-posts .post .posts li p span {
+            main .news .news-wrap .post .posts li p span {
               opacity: 0.5;
               color: #e2534b;
               font-family: "Open Sans";
@@ -337,11 +344,19 @@ main {
               line-height: 20px; }
   main .sponsors {
     height: 200px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     background-color: #bebebe;
     box-sizing: border-box; }
+    main .sponsors .container {
+      height: 100%; }
+      main .sponsors .container .sponsor-wrap {
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center; }
+        @media screen and (max-width: 400px) {
+          main .sponsors .container .sponsor-wrap {
+            flex-direction: column; } }
   main .bio {
     padding: 51px 0 80px 0;
     background-color: #e2534b;
@@ -356,6 +371,9 @@ main {
       text-align: center; }
     main .bio .bio-wrap {
       display: flex; }
+      @media screen and (max-width: 560px) {
+        main .bio .bio-wrap {
+          flex-direction: column; } }
       main .bio .bio-wrap .person {
         flex-basis: 50%;
         text-align: center; }
@@ -375,6 +393,9 @@ main {
             margin-left: 2%; }
       main .bio .bio-wrap .person-description {
         flex-basis: 50%; }
+        @media screen and (max-width: 560px) {
+          main .bio .bio-wrap .person-description {
+            text-align: center; } }
         main .bio .bio-wrap .person-description h5 {
           color: #fff;
           font-family: "Bebas Neue";
@@ -395,17 +416,19 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   background-image: url("../img/footer-bg.png");
   background-size: 100% 100%;
   box-sizing: border-box; }
   footer h2 {
-    margin-bottom: 69px;
     color: #252222;
     font-family: "Bebas Neue";
     font-size: 48px;
     font-weight: 400; }
+    @media screen and (max-width: 430px) {
+      footer h2 {
+        font-size: 24px; } }
   footer button {
-    width: 700px;
     height: 100px;
     border: 5px solid #fff;
     background-color: transparent;
@@ -414,17 +437,24 @@ footer {
     font-size: 60px;
     font-weight: 400;
     line-height: 18px; }
+    @media screen and (max-width: 430px) {
+      footer button {
+        font-size: 30px; } }
   footer p {
     color: #fff;
     font-family: "Bebas Neue";
     font-size: 30px;
     font-weight: 400;
     line-height: 58px; }
+    @media screen and (max-width: 430px) {
+      footer p {
+        font-size: 15px; } }
   footer .copiright {
     color: #fff;
     font-family: "Open Sans";
     font-size: 14px;
     font-weight: 700;
     line-height: 22px; }
-  footer .address {
-    margin-bottom: 110px; }
+    @media screen and (max-width: 430px) {
+      footer .copiright {
+        font-size: 10px; } }

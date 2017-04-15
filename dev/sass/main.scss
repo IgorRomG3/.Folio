@@ -123,13 +123,19 @@ main {
             font-size: 48px;
             font-weight: 400;
         }
-        .news-posts {
+        .news-wrap {
             display: flex;
             justify-content: space-around;
             box-sizing: border-box;
+            @media screen and (max-width:767px) {
+                flex-direction: column;
+            }
             .post {
                 position: relative;
                 flex-basis: 45%;
+                @media screen and (max-width:767px) {
+                    margin-bottom: 50px;
+                }
                 .post-name {
                     margin-bottom: 27px;
                     display: flex;
@@ -191,7 +197,6 @@ main {
                 .read-more {
                     position: absolute;
                     right: 8%;
-                    bottom: -5%;
                     a {
                         position: relative;
                         color: #e2534b;
@@ -203,7 +208,7 @@ main {
                             content: '';
                             position: absolute;
                             top: 20%;
-                            right: -35%;
+                            right: -30%;
                             width: 12px;
                             height: 13px;
                             background-image: url('../img/arrow.png');
@@ -237,6 +242,9 @@ main {
                         &:hover {
                             background-color: #e2534b;
                         }
+                    }
+                    .selected {
+                        background-color: #e2534b;
                     }
                 }
                 h4 {
@@ -273,11 +281,21 @@ main {
     }
     .sponsors {
         height: 200px;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
         background-color: #bebebe;
         box-sizing: border-box;
+        .container {
+            height: 100%;
+            .sponsor-wrap {
+                height: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+                @media screen and (max-width: 400px) {
+                    flex-direction: column;
+                }
+            }   
+        }
     }
     .bio {
         padding: 51px 0 80px 0;
@@ -294,6 +312,9 @@ main {
         }
         .bio-wrap {
             display: flex;
+            @media screen and (max-width:560px) {
+                flex-direction: column;
+            }
             .person {
                 flex-basis: 50%;
                 text-align: center;
@@ -318,6 +339,9 @@ main {
             }
             .person-description {
                 flex-basis: 50%;
+                @media screen and (max-width:560px) {
+                    text-align: center;
+                }
                 h5 {
                     color: #fff;
                     font-family: "Bebas Neue";
